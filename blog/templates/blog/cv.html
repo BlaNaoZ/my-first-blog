@@ -1,0 +1,128 @@
+{% load static %}
+<html>
+    <head>
+        <title>Andrei's Website</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
+            <h1> <a href="/">Andrei's Website</a></h1>
+            <ul> 
+                <li> <a href="{% url 'base' %}">Blog</a> </li>
+                <li> <a href="{% url 'cv' %}">CV</a> </li> 
+            </ul>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+        <div id="page-wrap">
+    
+            <div id="contact-info" class="vcard">
+        
+                <div class="cvh1">Florian-Andrei Blanaru</div>
+        
+                <p>
+                    Telephone: <span class="tel">07745796929</span><br />
+                    Email: <a class="email" href="mailto:fxb975@student.bham.ac.uk">fxb975@student.bham.ac.uk</a>
+                </p>
+            </div>
+                
+            <div id="objective">
+                <p>
+                    A motivated, hardworking and involved Computer Science student seeking an internship opportunity to 
+                    develop my skills and widen my knowledge in this field.
+                    With the experience gained through High School in the robotics club, 
+                    I managed to enhance my leadership and teamwork skills and gain a passion towards Computer Science, 
+                    which is now my base motivation to working hard on setting myself up a career.
+                </p>
+            </div>
+        
+            <div class="clear"></div>
+        
+            <dl>
+                <dd class="clear"></dd>
+            
+                <dt>Education</dt>
+                <dd>
+                    <div class="cvh2">University of Birmingham – 09/2019 – present</div>
+                    <p><strong>BSc Computer Science:</strong> 
+                        <div class="cvul">
+                            <li>Programming in Java</li>
+                            <li>Mathematical Foundations of Computer Science</li>
+                            <li>Logic and Computation</li>
+                            <li>Data Structures and Algorithms</li>
+                            <li>Artificial Intelligence</li>
+                        </div>     
+                    </p>
+                    <div class="cvh2">High School “Dragoș Vodă” Câmpulung Moldovenesc – 09/2015 – 06/2019</div>
+                    <p><strong>Romanian Baccalaureate </strong> - 8.93 out of 10 
+                        <div class="cvul">
+                            <li>Mathematics - 8.85 out of 10</li>
+                            <li>Romanian language and literature - 9 out of 10</li>
+                            <li>Computer science - 8.95 out of 10</li>
+                        </div>     
+                    </p>
+                </dd>
+            
+                <dd class="clear"></dd>
+            
+                <dt>Skills</dt>
+                <dd>
+                    <div class="cvul">
+                        <li> Achieved high experience in working with programming languages such as Java, C++ and HTML throughout 
+                            High School and first year of College</li>
+                        <li>Worked on different team projects involving the Raspberry Pi and 
+                            Arduino Uno boards, programming in Python and C</li>
+                        <li>Fluent in Romanian (Native), English (C1 Advanced) and intermediate in French.</li>
+                        <li>Achieved the ECDL (European Computer Driving License) BAC Profile which introduced 
+                            me to the basics of the computer and its tools</li>
+                    </div>
+                </dd>
+            
+                <dd class="clear"></dd>
+            
+                <dt>Previous hackathons and contests</dt>
+                <dd>
+                    <div class="cvh2">HackTheMidlands 2019 </div>
+                    <div class="cvul">
+                        <li>Learned how to use Twilio’s communication API</li>
+                    </div>
+                
+                    <div class="cvh2">CSS Qiskit Hackathon </div>
+                    <div class="cvul">
+                        <li>Learned how to use the Qiskit framework developed by IBM </li>
+                        <li>Developed my knowledge regarding quantum mechanics and quantum computing</li>
+                    </div> 
+                </dd>
+            
+                <dd class="clear"></dd>
+            
+                <dt>Hobbies and interests</dt>
+                <dd><div class="cvul">
+                    <li>Playing tennis as a way of being healthy but also for developing my competitiveness and concentration</li>
+                    <li>Playing the guitar as a way of relaxing and exploring a new skill</li>
+                    <li>Learning new languages (French) to widen my knowledge and keep my mind active</li>   
+                </div></dd>
+            
+                <dd class="clear"></dd>
+                <dd class="clear"></dd>
+            </dl>
+        
+            <div class="clear"></div>
+    
+        </div>
+    </body>
+</html>
