@@ -21,7 +21,7 @@ body {
     margin-left: 40px;
 }
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Open Sans Condensed', cursive;
 }
 .date {
     color: #828282;
@@ -119,11 +119,9 @@ p {
 a { 
     color: #999; 
     text-decoration: none; 
-    border-bottom: 1px dotted #999; 
 }
 
 a:hover { 
-    border-bottom-style: solid; 
     color: black; 
 }
 
